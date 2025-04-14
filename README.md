@@ -5,7 +5,7 @@
 
 RC-PasswordManager is a secure, offline password manager written in modern C++.  
 It provides AES-256 encryption, machine-locked key generation, and local encrypted storage using JSON.  
-No internet access is required. No external libraries are included.
+No internet access is required.
 
 ---
 
