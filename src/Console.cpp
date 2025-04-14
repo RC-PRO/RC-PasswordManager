@@ -92,7 +92,6 @@ void LoginMenu() {
 			" \33[38;5;160m│\n" <<
 			" └──\33[38;5;15m Password: ";
 
-		std::cin.ignore();
 		std::getline(std::cin, password);
 
 		std::vector<Password> v_Password = ReadPassword();
