@@ -126,7 +126,8 @@ void AddPasswordAndApp() {
 
 		std::cout << " \33[38;5;160m───\33[38;5;15mFor which application will this password be\n\n";
 		std::cout << "   \33[38;5;160m*\33[38;5;15m";
-		std::cin >> app;
+		std::cin.ignore();
+		std::getline(std::cin, app);
 
 		system("cls");
 		Tag();
@@ -134,7 +135,7 @@ void AddPasswordAndApp() {
 		std::cout << " \33[38;5;160m┌──\33[38;5;15mFor which application will this password be\n \33[38;5;160m└──\33[38;5;15m" + app + "\n\n";
 		std::cout << " \33[38;5;160m───\33[38;5;15mSet the password\n\n";
 		std::cout << "   \33[38;5;160m*\33[38;5;15m";
-		std::cin >> password;
+		std::getline(std::cin, password);
 
 		system("cls");
 		Tag();
@@ -207,12 +208,13 @@ void ModifyPasswordAndApp() {
 
 						std::cout << "\33[38;5;160m ┌──Modify App(" << "\33[38;5;15m" << app << "\33[38;5;160m)\33[38;5;15m" << "\n";
 						std::cout << "\33[38;5;160m └──*" << "\33[38;5;15m";
-						std::cin >> newapp;
+						std::cin.ignore();
+						std::getline(std::cin, newapp);
 						std::cout << "\n";
 
 						std::cout << "\33[38;5;160m ┌──Modify Password(" << "\33[38;5;15m" << decrypted_pw << "\33[38;5;160m)\33[38;5;15m" << "\n";
 						std::cout << "\33[38;5;160m └──*" << "\33[38;5;15m";
-						std::cin >> newpassword;
+						std::getline(std::cin, newpassword);
 						std::cout << "\n\n\n\n";
 
 						std::string encrypted_pw = EncryptPassword(newpassword);
